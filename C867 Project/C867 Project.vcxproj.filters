@@ -26,13 +26,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="degree.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="student.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="roster.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="degree.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
