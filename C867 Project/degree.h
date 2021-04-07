@@ -1,7 +1,5 @@
-#ifndef student.h
-#define student.h
+#pragma once
 
-enum DegreeProgram {SECURITY, NETWORK, SOFTWARE};
+enum DegreeProgram {SECURITY, NETWORK, SOFTWARE, INVALID};
 
 
-#endif

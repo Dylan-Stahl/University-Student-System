@@ -1,9 +1,8 @@
-#ifndef student.h
-#define student.h
-
+#pragma once
+/*
 class roster
 {
-	/*
+	
 	E.  Create a Roster class (roster.cpp) by doing the following:
 1.  Create an array of pointers, classRosterArray, to hold the data provided in the “studentData Table.”
 
@@ -18,7 +17,7 @@ c. public void printAll() that prints a complete tab-separated list of student d
 d.  public void printAverageDaysInCourse(string studentID)  that correctly prints a student’s average number of days in the three courses. The student is identified by the studentID parameter.
 e.  public void printInvalidEmails() that verifies student email addresses and displays all invalid email addresses to the user.
 Note: A valid email should include an at sign ('@') and period ('.') and should not include a space (' ').
-f.  public void printByDegreeProgram(DegreeProgram degreeProgram) that prints out student information for a degree program specified by an enumerated type.*/
+f.  public void printByDegreeProgram(DegreeProgram degreeProgram) that prints out student information for a degree program specified by an enumerated type.
 public:
 
 
@@ -27,4 +26,4 @@ private:
 
 };
 
-#endif
+*/
