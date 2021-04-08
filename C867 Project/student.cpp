@@ -13,27 +13,29 @@ Student::Student()
 	this->lastName = "";
 	this->email = "";
 	this->age = 0;
-	//numOfDaysToComplete and daysToComplete need a for loop with pointers
 	for (int i = 0; i < NUMCOURSES; ++i) {
 		numOfDaysToComplete[i] = 0;
 	}
 	this->degreeProgram = INVALID;
 }
 
-
 Student::Student(string studentID, string firstName, string lastName, string email, int age, int daysToComplete[], DegreeProgram degreeProgram)
 {
-	//cout << "Constructor Called" << endl;
 	this->studentID = studentID;
 	this->firstName = firstName;
 	this->lastName = lastName;
 	this->email = email;
 	this->age = age;
-	//numOfDaysToComplete and daysToComplete need a for loop with pointers
 	for (int i = 0; i < NUMCOURSES; ++i) {
 		numOfDaysToComplete[i] = daysToComplete[i];
 	}
 	this->degreeProgram = degreeProgram;
+}
+
+//Deconstructor
+Student::~Student()
+{
+	delete numOfDaysToComplete;
 }
 
 //Getter functions following
@@ -80,31 +82,26 @@ DegreeProgram Student::GetDegreeProgram() const
 void Student::SetStudentID(string studentID)
 {
 	this->studentID = studentID;
-	return;
 }
 
 void Student::SetFirstName(string firstName)
 {
 	this->firstName = firstName;
-	return;
 }
 
 void Student::SetLastName(string lastName)
 {
 	this->lastName = lastName;
-	return;
 }
 
 void Student::SetEmail(string email)
 {
 	this->email = email;
-	return;
 }
 
 void Student::SetAge(int age)
 {
 	this->age = age;
-	return;
 }
 
 void Student::SetDaysToComplete(int daysToComplete[])
@@ -112,24 +109,21 @@ void Student::SetDaysToComplete(int daysToComplete[])
 	for (int i = 0; i < NUMCOURSES; ++i) {
 		numOfDaysToComplete[i] = daysToComplete[i];
 	}
-	return;
 }
 
 void Student::SetDegreeProgram(DegreeProgram degreeProgram)
 {
 	this->degreeProgram = degreeProgram;
-	return;
 }
 
 //Print Function
 void Student::Print()
 {
-	cout << "Student ID: " << this->studentID << "\t";
+	cout << this->studentID << "\t";
 	cout << "First Name: " << this->firstName << "\t";
 	cout << "Last Name: " << this->lastName << "\t";
-	cout << "Email: " << this->email << "\t";
-	cout << "Age: " << this->age << "\t" << endl;
-	cout << "Number of days to complete three classes: " << numOfDaysToComplete[0] << ", " << numOfDaysToComplete[1] << ", " << numOfDaysToComplete[2] << "\t";
+	cout << "Age: " << this->age << "\t";
+	cout << "daysInCourse: " << numOfDaysToComplete[0] << ", " << numOfDaysToComplete[1] << ", " << numOfDaysToComplete[2] << "\t";
 	
 
 	if (this->degreeProgram == SECURITY) {
@@ -140,6 +134,9 @@ void Student::Print()
 	}
 	else if (this->degreeProgram == SOFTWARE) {
 		cout << "Degree Program: " << "SOFTWARE" << endl;
+	}
+	else if (this->degreeProgram == INVALID) {
+		cout << "Degree Program Invalid" << endl;
 	}
 }
 
