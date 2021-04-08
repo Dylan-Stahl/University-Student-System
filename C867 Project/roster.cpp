@@ -122,7 +122,7 @@ void Roster::printAverageDaysInCourse(string studentID)
 			int* daysToComplete = classRosterArray[i]->GetdaysToComplete();
 			int avgDays = (daysToComplete[0] + daysToComplete[1] + daysToComplete[2]) / 3;
 			
-			cout << "Student ID: " << studentID << ", averages " << avgDays << " in a course." << endl;
+			cout << "Student ID: " << studentID << ", averages " << avgDays << " days in a course." << endl;
 			foundStudentID = true;
 		}
 		
